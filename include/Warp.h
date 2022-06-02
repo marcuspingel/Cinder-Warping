@@ -73,11 +73,11 @@ class Warp : public std::enable_shared_from_this<Warp> {
 	Warp &operator=( Warp && ) = delete;
 
 	//! Returns \c TRUE if edit mode is enabled.
-	static bool isEditModeEnabled() { return bool( sIsEditMode ); };
+	static bool isEditModeEnabled() { return bool( sIsEditMode ); }
 	//! Enables or disables edit mode.
-	static void enableEditMode( bool enabled = true ) { sIsEditMode = enabled; };
+	static void enableEditMode( bool enabled = true ) { sIsEditMode = enabled; }
 	//! Disables edit mode.
-	static void disableEditMode() { sIsEditMode = false; };
+	static void disableEditMode() { sIsEditMode = false; }
 	//! Toggles edit mode.
 	static void toggleEditMode()
 	{
@@ -86,11 +86,11 @@ class Warp : public std::enable_shared_from_this<Warp> {
 	};
 
 	//! Returns \c TRUE if gamma mode is enabled. If enabled, renders a gamma correction test image instead of the content.
-	static bool isGammaModeEnabled() { return bool( sIsGammaMode ); };
+	static bool isGammaModeEnabled() { return bool( sIsGammaMode ); }
 	//! Enables or disables gamma mode. If enabled, renders a gamma correction test image instead of the content.
-	static void enableGammaMode( bool enabled = true ) { sIsGammaMode = enabled; };
+	static void enableGammaMode( bool enabled = true ) { sIsGammaMode = enabled; }
 	//! Disables gamma mode.
-	static void disableGammaMode() { sIsGammaMode = false; };
+	static void disableGammaMode() { sIsGammaMode = false; }
 	//! Toggles gamma mode. If enabled, renders a gamma correction test image instead of the content.
 	static void toggleGammaMode()
 	{
@@ -120,7 +120,7 @@ class Warp : public std::enable_shared_from_this<Warp> {
 	//! Get the width and height of the content in pixels.
 	ci::vec2 getSize() const { return ci::vec2( mWidth, mHeight ); };
 	//! Get the width and height of the content in pixels.
-	ci::Rectf getBounds() const { return ci::Rectf( 0, 0, mWidth, mHeight ); };
+	ci::Rectf getBounds() const { return ci::Rectf( 0, 0, mWidth, mHeight ); }
 	//! Set the width of the content in pixels.
 	virtual void setWidth( float w ) { setSize( w, mHeight ); }
 	//! Set the height of the content in pixels.
