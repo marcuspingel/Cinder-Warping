@@ -468,7 +468,7 @@ class WarpPerspective final : public Warp {
 	static WarpPerspectiveRef create() { return std::make_shared<WarpPerspective>(); }
 
 	WarpPerspective();
-	virtual ~WarpPerspective() = default;
+	~WarpPerspective() override = default;
 
 	WarpPerspective( const WarpPerspective & ) = delete;
 	WarpPerspective( WarpPerspective && ) = delete;
@@ -536,7 +536,7 @@ class WarpPerspectiveBilinear final : public WarpBilinear {
 	static WarpPerspectiveBilinearRef create( const ci::gl::Fbo::Format &format = ci::gl::Fbo::Format() ) { return std::make_shared<WarpPerspectiveBilinear>( format ); }
 
 	explicit WarpPerspectiveBilinear( const ci::gl::Fbo::Format &format = ci::gl::Fbo::Format() );
-	virtual ~WarpPerspectiveBilinear() = default;
+	~WarpPerspectiveBilinear() override = default;
 
 	WarpPerspectiveBilinear( const WarpPerspectiveBilinear & ) = delete;
 	WarpPerspectiveBilinear( WarpPerspectiveBilinear && ) = delete;
